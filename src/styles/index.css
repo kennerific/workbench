@@ -115,6 +115,33 @@
   to { opacity: 1; transform: none; }
 }
 
+/* Edge-on at the midpoint, which is when a Wordle tile swaps its colour. */
+@keyframes wb-flip {
+  0% { transform: rotateX(0); }
+  50% { transform: rotateX(90deg); }
+  100% { transform: rotateX(0); }
+}
+
+@keyframes wb-pop {
+  0% { transform: scale(0.92); }
+  45% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wb-deal {
+  from { opacity: 0; transform: translate(-10px, -20px) rotate(-6deg); }
+  to { opacity: 1; transform: none; }
+}
+
 @theme {
   --animate-rise: wb-rise var(--dur-2) var(--ease) both;
+  --animate-flip: wb-flip 500ms ease-in-out both;
+  --animate-pop: wb-pop 120ms var(--ease);
+  --animate-deal: wb-deal 300ms var(--ease) both;
+}
+
+/* An opaque accent wash, for cells that sit on a dark grid line where the
+   translucent accent-soft would let the line colour through. */
+@theme inline {
+  --color-accent-tint: color-mix(in srgb, var(--accent) 16%, var(--surface));
 }

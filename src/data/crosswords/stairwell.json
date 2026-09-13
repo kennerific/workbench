@@ -1,0 +1,22 @@
+{
+  "id": "stairwell",
+  "title": "Stairwell",
+  "author": "Workbench",
+  "solution": ["ERR##", "ROOF#", "ALBUM", "#LOSE", "##TEN"],
+  "clues": {
+    "across": {
+      "1": "Make a mistake",
+      "4": "Top of a house",
+      "6": "Collection of songs or photos",
+      "8": "Misplace, as keys",
+      "9": "Perfect score, often"
+    },
+    "down": {
+      "1": "Period of history",
+      "2": "Dinner bread",
+      "3": "Machine that follows a program",
+      "5": "It can blow when a circuit overloads",
+      "7": "Adult males"
+    }
+  }
+}

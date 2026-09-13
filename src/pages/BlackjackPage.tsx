@@ -1,5 +1,5 @@
-import { ComingSoon } from '../components/common/ComingSoon'
+import { BlackjackGame } from '../components/games/blackjack/BlackjackGame'
 
 export function BlackjackPage() {
-  return <ComingSoon id="blackjack" />
+  return <BlackjackGame />
 }

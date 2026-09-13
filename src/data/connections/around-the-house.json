@@ -1,0 +1,11 @@
+{
+  "id": "around-the-house",
+  "title": "Around the house",
+  "author": "Workbench",
+  "groups": [
+    { "label": "Furniture", "level": 0, "words": ["SOFA", "DESK", "STOOL", "DRESSER"] },
+    { "label": "Rooms", "level": 1, "words": ["ATTIC", "CELLAR", "STUDY", "PANTRY"] },
+    { "label": "Hand tools", "level": 2, "words": ["HAMMER", "WRENCH", "CHISEL", "SAW"] },
+    { "label": "Book___", "level": 3, "words": ["CASE", "MARK", "WORM", "SHELF"] }
+  ]
+}

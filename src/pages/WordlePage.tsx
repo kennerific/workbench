@@ -1,5 +1,5 @@
-import { ComingSoon } from '../components/common/ComingSoon'
+import { WordleGame } from '../components/games/wordle/WordleGame'
 
 export function WordlePage() {
-  return <ComingSoon id="wordle" />
+  return <WordleGame />
 }

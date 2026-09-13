@@ -1,0 +1,22 @@
+{
+  "id": "movie-night",
+  "title": "Movie night",
+  "author": "Workbench",
+  "solution": ["#RAM#", "HOLES", "ABIDE", "MOVIE", "#TEA#"],
+  "clues": {
+    "across": {
+      "1": "Male sheep",
+      "4": "A golf course usually has 18 of these",
+      "6": "Put up with",
+      "7": "Film",
+      "8": "Earl Grey, for one"
+    },
+    "down": {
+      "1": "Android",
+      "2": "Living",
+      "3": "Newspapers, radio and TV, collectively",
+      "4": "Holiday roast",
+      "5": "Spot"
+    }
+  }
+}

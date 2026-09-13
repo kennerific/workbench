@@ -1,5 +1,5 @@
-import { ComingSoon } from '../components/common/ComingSoon'
+import { CrosswordGame } from '../components/games/crossword/CrosswordGame'
 
 export function CrosswordPage() {
-  return <ComingSoon id="crossword" />
+  return <CrosswordGame />
 }

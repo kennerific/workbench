@@ -1,0 +1,11 @@
+{
+  "id": "punch-lines",
+  "title": "Punch lines",
+  "author": "Workbench",
+  "groups": [
+    { "label": "Fruit", "level": 0, "words": ["LEMON", "PLUM", "DATE", "FIG"] },
+    { "label": "Spans of time", "level": 1, "words": ["MONTH", "WEEK", "YEAR", "DECADE"] },
+    { "label": "Dog breeds", "level": 2, "words": ["BOXER", "POODLE", "BEAGLE", "PUG"] },
+    { "label": "Things you punch", "level": 3, "words": ["TICKET", "CLOCK", "CARD", "HOLE"] }
+  ]
+}

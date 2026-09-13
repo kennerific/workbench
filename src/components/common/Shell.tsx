@@ -4,6 +4,7 @@ import { appForPath } from '../../data/apps'
 import { recordRecent } from '../../utils/recent'
 import { Footer } from './Footer'
 import { Masthead } from './Masthead'
+import { ToastProvider } from './Toast'
 
 /* The frame every view sits in. The current app's accent is stamped on <html>
    rather than a wrapper, because the derived tokens (accent-soft, focus) are
@@ -23,12 +24,14 @@ export function Shell() {
   }, [pathname])
 
   return (
-    <div className="flex min-h-dvh flex-col">
-      <Masthead app={app} />
-      <main className="mx-auto flex w-full max-w-shell flex-1 flex-col gap-s5 px-s5 py-s5 max-sm:px-s4">
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
+    <ToastProvider>
+      <div className="flex min-h-dvh flex-col">
+        <Masthead app={app} />
+        <main className="mx-auto flex w-full max-w-shell flex-1 flex-col gap-s5 px-s5 py-s5 max-sm:px-s4">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </ToastProvider>
   )
 }

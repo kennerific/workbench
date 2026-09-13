@@ -1,0 +1,11 @@
+{
+  "id": "warm-up",
+  "title": "Warm-up",
+  "author": "Workbench",
+  "groups": [
+    { "label": "Shades of blue", "level": 0, "words": ["NAVY", "TEAL", "COBALT", "AZURE"] },
+    { "label": "Keyboard keys", "level": 1, "words": ["SHIFT", "ENTER", "ESCAPE", "TAB"] },
+    { "label": "Poker moves", "level": 2, "words": ["FOLD", "CALL", "RAISE", "CHECK"] },
+    { "label": "___ball", "level": 3, "words": ["FOOT", "BASKET", "SNOW", "EYE"] }
+  ]
+}

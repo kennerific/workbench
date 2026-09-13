@@ -1,0 +1,22 @@
+{
+  "id": "board-meeting",
+  "title": "Board meeting",
+  "author": "Workbench",
+  "solution": ["#BET#", "BOARD", "ANGER", "DELAY", "#SET#"],
+  "clues": {
+    "across": {
+      "1": "Wager",
+      "4": "Get on, as a train",
+      "6": "Fury",
+      "7": "Hold-up at the airport",
+      "8": "Lay out, as the table for dinner"
+    },
+    "down": {
+      "1": "Skeleton parts",
+      "2": "Bird with a famously sharp eye",
+      "3": "Reward for a good dog",
+      "4": "Not good",
+      "5": "Like a desert"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "weather-report",
+  "title": "Weather report",
+  "author": "Workbench",
+  "groups": [
+    { "label": "Precipitation", "level": 0, "words": ["RAIN", "SLEET", "HAIL", "SNOW"] },
+    { "label": "Cloud types", "level": 1, "words": ["CIRRUS", "CUMULUS", "STRATUS", "NIMBUS"] },
+    { "label": "Units on a weather map", "level": 2, "words": ["KNOT", "BAR", "INCH", "DEGREE"] },
+    { "label": "___storm", "level": 3, "words": ["BRAIN", "FIRE", "SAND", "THUNDER"] }
+  ]
+}

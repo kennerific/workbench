@@ -1,0 +1,11 @@
+{
+  "id": "kitchen-drawer",
+  "title": "Kitchen drawer",
+  "author": "Workbench",
+  "groups": [
+    { "label": "Kitchen utensils", "level": 0, "words": ["WHISK", "LADLE", "SPATULA", "TONGS"] },
+    { "label": "Card games", "level": 1, "words": ["RUMMY", "HEARTS", "SNAP", "BRIDGE"] },
+    { "label": "Things with shells", "level": 2, "words": ["EGG", "TURTLE", "WALNUT", "OYSTER"] },
+    { "label": "___cake", "level": 3, "words": ["PAN", "FISH", "CHEESE", "SPONGE"] }
+  ]
+}

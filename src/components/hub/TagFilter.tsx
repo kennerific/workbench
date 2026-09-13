@@ -7,7 +7,7 @@ const OPTIONS: Array<AppTag | null> = [null, ...TAGS]
 /** A joined segmented control. One tag at a time, or All. */
 export function TagFilter({ value, onChange }: { value: AppTag | null; onChange: (tag: AppTag | null) => void }) {
   return (
-    <div role="group" aria-label="Filter by tag" className="flex max-w-full overflow-x-auto border border-line-strong">
+    <div role="group" aria-label="Filter by tag" className="flex max-w-full overflow-x-auto border border-line-strong [scrollbar-width:none]">
       {OPTIONS.map((tag, index) => {
         const selected = value === tag
         return (

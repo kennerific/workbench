@@ -1,0 +1,22 @@
+{
+  "id": "arches",
+  "title": "Arches",
+  "author": "Workbench",
+  "solution": ["#ARCH", "SPARE", "EATER", "TRIED", "STOP#"],
+  "clues": {
+    "across": {
+      "1": "Curved doorway shape",
+      "5": "Extra tire in the trunk",
+      "6": "Picky ___",
+      "7": "Gave it a go",
+      "8": "Word on a red octagonal sign"
+    },
+    "down": {
+      "1": "Separated",
+      "2": "3:2, for example",
+      "3": "Move very slowly",
+      "4": "Group of cattle",
+      "5": "Parts of a tennis match"
+    }
+  }
+}

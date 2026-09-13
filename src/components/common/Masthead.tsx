@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import { ChartColumn } from 'lucide-react'
 import type { InternalApp } from '../../types/app'
+import { cx } from '../../utils/cx'
 import { SearchBar } from '../hub/SearchBar'
 import { Button } from './Button'
 import { SoundToggle } from './SoundToggle'
@@ -16,7 +17,9 @@ export function Masthead({ app }: { app?: InternalApp }) {
   return (
     <header className="sticky top-0 z-20 border-b border-fg bg-surface">
       <div className="mx-auto flex min-h-(--header-h) max-w-shell flex-wrap items-center gap-x-s4 gap-y-s2 px-s5 py-s2 max-sm:px-s4">
-        <nav aria-label="Breadcrumb" className="flex min-w-0 items-center gap-s2">
+        {/* Inside an app the breadcrumb takes the spare width and truncates, so
+            the actions stay on the first row of a phone-width masthead. */}
+        <nav aria-label="Breadcrumb" className={cx('flex min-w-0 items-center gap-s2', app && 'flex-1')}>
           {/* The square of accent says which tool you are in at a glance. */}
           <Link
             to="/"

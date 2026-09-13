@@ -12,7 +12,7 @@ export function SearchBar() {
   useEffect(() => {
     function onKey(event: KeyboardEvent) {
       if (event.key !== '/' || event.ctrlKey || event.metaKey || event.altKey) return
-      const target = event.target as HTMLElement | null
+      const target = event.target instanceof Element ? event.target : null
       if (target?.closest('input, textarea, select, [contenteditable="true"]')) return
       event.preventDefault()
       inputRef.current?.focus()

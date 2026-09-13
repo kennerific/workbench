@@ -1,0 +1,11 @@
+{
+  "id": "night-sky",
+  "title": "Night sky",
+  "author": "Workbench",
+  "groups": [
+    { "label": "Planets", "level": 0, "words": ["MARS", "VENUS", "SATURN", "MERCURY"] },
+    { "label": "Greek letters", "level": 1, "words": ["ALPHA", "DELTA", "SIGMA", "OMEGA"] },
+    { "label": "Metals", "level": 2, "words": ["IRON", "TIN", "COPPER", "ZINC"] },
+    { "label": "___way", "level": 3, "words": ["MILKY", "RAIL", "HIGH", "RUN"] }
+  ]
+}
