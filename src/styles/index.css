@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* Workbench owns the tokens and base styles. Both sit in the base layer so
+   Tailwind utilities still win over element defaults like h1 sizes or link
+   colour. */
+@import "./tokens.css" layer(base);
+@import "./base.css" layer(base);
+
+/* Themes swap by variable, so dark: is rarely needed. When it is, it follows
+   the same three states as the tokens: explicit dark, or system dark unless
+   light was chosen. */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme="light"]), :root:not([data-theme="light"]) *) {
+      @slot;
+    }
+  }
+}
+
+/* Tailwind reads Workbench, never the other way round. Default palettes,
+   radii and shadows are cleared so an off-system value cannot slip in. */
+@theme inline {
+  --color-*: initial;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-line-strong: var(--line-strong);
+
+  --color-accent: var(--accent);
+  --color-accent-on: var(--accent-on);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-line: var(--accent-line);
+
+  --color-ok: var(--ok);
+  --color-ok-on: var(--ok-on);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-on: var(--warn-on);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --color-danger-on: var(--danger-on);
+  --color-danger-soft: var(--danger-soft);
+
+  /* Named families, for surfaces that show several apps or groups at once. */
+  --color-magenta: var(--accent-magenta);
+  --color-magenta-on: var(--accent-magenta-on);
+  --color-cobalt: var(--accent-cobalt);
+  --color-cobalt-on: var(--accent-cobalt-on);
+  --color-teal: var(--accent-teal);
+  --color-teal-on: var(--accent-teal-on);
+  --color-green: var(--accent-green);
+  --color-green-on: var(--accent-green-on);
+  --color-amber: var(--accent-amber);
+  --color-amber-on: var(--accent-amber-on);
+  --color-vermillion: var(--accent-vermillion);
+  --color-vermillion-on: var(--accent-vermillion-on);
+  --color-violet: var(--accent-violet);
+  --color-violet-on: var(--accent-violet-on);
+  --color-graphite: var(--accent-graphite);
+  --color-graphite-on: var(--accent-graphite-on);
+
+  --font-*: initial;
+  --font-sans: var(--font-ui);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-editorial);
+
+  --text-*: initial;
+  --text-xs: var(--t-xs);
+  --text-xs--line-height: 1.45;
+  --text-sm: var(--t-sm);
+  --text-sm--line-height: 1.45;
+  --text-base: var(--t-base);
+  --text-base--line-height: var(--lh);
+  --text-md: var(--t-md);
+  --text-md--line-height: var(--lh);
+  --text-lg: var(--t-lg);
+  --text-lg--line-height: var(--lh-tight);
+  --text-xl: var(--t-xl);
+  --text-xl--line-height: var(--lh-tight);
+  --text-2xl: var(--t-2xl);
+  --text-2xl--line-height: var(--lh-tight);
+  --text-3xl: var(--t-3xl);
+  --text-3xl--line-height: var(--lh-tight);
+
+  /* The Workbench space scale, alongside Tailwind's numeric multiplier. */
+  --spacing-s1: var(--s-1);
+  --spacing-s2: var(--s-2);
+  --spacing-s3: var(--s-3);
+  --spacing-s4: var(--s-4);
+  --spacing-s5: var(--s-5);
+  --spacing-s6: var(--s-6);
+  --spacing-s7: var(--s-7);
+  --spacing-s8: var(--s-8);
+
+  --radius-*: initial;
+
+  --shadow-*: initial;
+  --shadow-float: var(--shadow-pop);
+
+  --ease-wb: var(--ease);
+  --container-shell: var(--shell-max);
+}
+
+@keyframes wb-rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@theme {
+  --animate-rise: wb-rise var(--dur-2) var(--ease) both;
+}
