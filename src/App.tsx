@@ -5,6 +5,7 @@ import { WordlePage } from './pages/WordlePage'
 import { ConnectionsPage } from './pages/ConnectionsPage'
 import { BlackjackPage } from './pages/BlackjackPage'
 import { CrosswordPage } from './pages/CrosswordPage'
+import { EndBehaviorPage } from './pages/EndBehaviorPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 
 // BASE_URL is "/workbench/"; the router wants it without the trailing slash.
@@ -20,6 +21,7 @@ export function App() {
           <Route path="connections" element={<ConnectionsPage />} />
           <Route path="blackjack" element={<BlackjackPage />} />
           <Route path="crossword" element={<CrosswordPage />} />
+          <Route path="end-behavior" element={<EndBehaviorPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

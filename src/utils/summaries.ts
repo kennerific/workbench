@@ -2,11 +2,13 @@ import type { StatItem } from '../components/common/Stats'
 import type { BlackjackState, BlackjackStats } from '../types/blackjack'
 import type { ConnectionsStats } from '../types/connections'
 import type { CrosswordStats } from '../types/crossword'
+import type { EndBehaviorStats } from '../types/endBehavior'
 import type { WordleStats } from '../types/wordle'
 import { BLACKJACK_KEYS, EMPTY_BLACKJACK_STATS, STARTING_BANK, formatMoney } from './blackjack'
 import { CONNECTIONS_KEYS, EMPTY_CONNECTIONS_STATS } from './connections'
 import { CROSSWORD_KEYS, EMPTY_CROSSWORD_STATS } from './crossword'
 import { dayNumber } from './daily'
+import { EMPTY_END_STATS, END_KEYS, accuracy } from './endBehavior'
 import { getStored } from './storage'
 import { formatClock } from './time'
 import { EMPTY_STATS, WORDLE_KEYS, visibleStreak, winRate } from './wordle'
@@ -80,6 +82,24 @@ const readers: Record<string, SummaryReader> = {
         { label: 'Fastest', value: formatClock(fastest) },
       ],
       meta: `${stats.solved} solved · Best ${formatClock(fastest)}`,
+    }
+  },
+
+  'end-behavior'() {
+    const stats = getStored<EndBehaviorStats>(END_KEYS.stats, EMPTY_END_STATS)
+    const { identify, graph } = stats.modes
+    const answered = identify.answered + graph.answered
+    if (answered === 0) return null
+    const overall = accuracy({ answered, correct: identify.correct + graph.correct })
+    return {
+      stats: [
+        { label: 'Answered', value: answered },
+        { label: 'Correct %', value: overall },
+        { label: 'Identify %', value: accuracy(identify) },
+        { label: 'Graph %', value: accuracy(graph) },
+        { label: 'Best streak', value: stats.best },
+      ],
+      meta: `${overall}% correct · Streak ${stats.streak}`,
     }
   },
 }

@@ -12,6 +12,7 @@ Live at **https://kennerific.github.io/workbench/**.
 | Connections | Sixteen words, four hidden groups, four mistakes. Six built-in puzzles, a daily pick, and a loader for your own JSON puzzles. |
 | Blackjack | Six-deck shoe, dealer stands on all 17s, 3:2 blackjack, split, double, insurance and surrender, with a persistent $1,000 bankroll. |
 | Mini Crossword | Interactive 5x5 grids with keyboard navigation, a clock, and check and reveal tools. |
+| End Behavior | Polynomial end behavior drills: classify a graph as positive or negative, even or odd, with limit notation, or build one on a grid from a prompt. |
 | Chartroom | A sibling site for drilling physical geography, linked from the hub. |
 
 ## Run it locally
@@ -47,7 +48,7 @@ src/
   components/
     common/     shell, masthead, modal, toast, buttons, stats, segmented control
     hub/        launcher tiles, search, tag filter, recently played
-    games/      wordle/, connections/, blackjack/, crossword/
+    games/      wordle/, connections/, blackjack/, crossword/, endBehavior/
   data/         app registry, word lists, Connections and crossword puzzles
   hooks/        useLocalStorage, useKeyboard, useTheme, useTicker, and friends
   pages/        one component per route
@@ -74,8 +75,8 @@ mono type only for data, and one identity colour per app.
   are the Workbench values. Tailwind's default palette, radii and shadows are
   cleared on purpose.
 - Each route stamps its app's accent on `<html>` (Wordle green, Connections
-  violet, Blackjack vermillion, Crossword cobalt), so `accent` utilities follow
-  the app you are in.
+  violet, Blackjack vermillion, Crossword cobalt, End Behavior teal), so
+  `accent` utilities follow the app you are in.
 - Themes have three states: an explicit light or dark choice sets `data-theme`,
   and the default follows the system. The choice is applied before first paint.
 
@@ -97,6 +98,7 @@ crashing the page.
 | `wb:connections:*` | Current puzzle, progress per puzzle, custom puzzles, stats |
 | `wb:blackjack:table`, `wb:blackjack:stats` | The whole table including the shoe and bankroll, and stats |
 | `wb:crossword:*` | Current puzzle, progress and clock per puzzle, stats and best times |
+| `wb:end-behavior:*` | Mode, and answers, accuracy and streaks per mode and per class |
 
 ## Adding a game or tool
 
