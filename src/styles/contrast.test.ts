@@ -60,7 +60,7 @@ interface Pair {
   min?: number
 }
 
-const ACCENTS = ['green', 'violet', 'vermillion', 'cobalt', 'amber', 'graphite', 'magenta']
+const ACCENTS = ['green', 'violet', 'vermillion', 'cobalt', 'amber', 'graphite', 'magenta', 'teal']
 
 const PAIRS: Pair[] = [
   // Shell and shared text

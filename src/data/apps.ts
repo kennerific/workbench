@@ -1,4 +1,4 @@
-import { Compass, Grid3x3, LayoutGrid, Spade, Type } from 'lucide-react'
+import { ChartSpline, Compass, Grid3x3, LayoutGrid, Spade, Type } from 'lucide-react'
 import type { AppEntry, AppTag, InternalApp } from '../types/app'
 
 /* The one list of everything the hub offers. The launcher, search, global
@@ -44,6 +44,16 @@ export const APPS: readonly AppEntry[] = [
     icon: Grid3x3,
     status: 'live',
     route: '/crossword',
+  },
+  {
+    id: 'end-behavior',
+    name: 'End Behavior',
+    description: 'Classify polynomial graphs by where their ends go, then build your own on a grid.',
+    tags: ['Study'],
+    accent: 'teal',
+    icon: ChartSpline,
+    status: 'live',
+    route: '/end-behavior',
   },
   {
     id: 'chartroom',
